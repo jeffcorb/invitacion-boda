@@ -284,27 +284,23 @@
   transform: translate(-50%, -50%);
   z-index: 10;
   cursor: pointer;
-  background: #5f5e2b;
-  color: #ffffff;
+  background: none;
   border: none;
-  border-radius: 9999px;
-  padding: 13px 36px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
+  padding: 0;
+  width: clamp(64px, 14vw, 100px);
+  height: clamp(64px, 14vw, 100px);
+  border-radius: 50%;
   box-shadow:
     0 6px 20px rgba(95, 94, 43, 0.35),
     0 2px 6px rgba(0, 0, 0, 0.15);
-  transition: background 250ms ease, box-shadow 250ms ease, transform 200ms ease;
+  transition: box-shadow 250ms ease, transform 200ms ease;
   -webkit-tap-highlight-color: transparent;
-  white-space: nowrap;
+  overflow: hidden;
 }
 
 #wax-seal:hover {
-  background: #745b22;
-  box-shadow: 0 8px 26px rgba(95, 94, 43, 0.45);
-  transform: translate(-50%, -50%) scale(1.04);
+  box-shadow: 0 8px 26px rgba(95, 94, 43, 0.50);
+  transform: translate(-50%, -50%) scale(1.06);
 }
 
 #wax-seal:active {
