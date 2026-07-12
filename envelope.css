@@ -1,0 +1,313 @@
+/* ============================================================
+   ENVELOPE OPENING SEQUENCE
+   Luxury Wedding Invitation — Jefferson & Kari
+   ============================================================ */
+
+/* --- Scroll lock while envelope is shown --- */
+body.env-locked {
+  overflow: hidden;
+}
+
+/* ============================================================
+   INVITATION REVEAL WRAPPER
+   The existing page content starts hidden and animates in.
+   ============================================================ */
+#invitation-reveal {
+  opacity: 0;
+  transform: translateY(70px) scale(0.86);
+  pointer-events: none;
+  /* No transition here — JS adds classes to trigger transitions */
+}
+
+/* Phase 1: card begins emerging from envelope */
+#invitation-reveal.env-emerging {
+  transition:
+    opacity  900ms ease-out,
+    transform 1600ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  opacity: 0.92;
+  transform: translateY(22px) scale(0.93);
+}
+
+/* Phase 2: card expands to fill the screen */
+#invitation-reveal.env-expanded {
+  transition:
+    opacity  600ms ease-out,
+    transform 1200ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: all;
+}
+
+/* ============================================================
+   ENVELOPE FULL-SCREEN OVERLAY
+   ============================================================ */
+#envelope-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 800ms ease-out;
+}
+
+#envelope-overlay.env-fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ============================================================
+   LUXURY AMBIENT BACKGROUND
+   Soft, almost imperceptible slow-float animation.
+   ============================================================ */
+#luxury-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 65% 55% at 25% 35%, rgba(232, 230, 165, 0.20) 0%, transparent 70%),
+    radial-gradient(ellipse 55% 65% at 75% 68%, rgba(116, 91, 34, 0.09) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 55% 15%, rgba(250, 246, 238, 0.80) 0%, transparent 60%),
+    linear-gradient(145deg, #fdfaf5 0%, #f7f2e8 45%, #f5f0e6 80%, #fdfaf5 100%);
+  animation: luxuryFloat 11s ease-in-out infinite alternate;
+}
+
+@keyframes luxuryFloat {
+  0%   { transform: scale(1.00) translate(0px,   0px); }
+  100% { transform: scale(1.04) translate(-9px, -6px); }
+}
+
+/* ============================================================
+   ENVELOPE WRAPPER & 3D PERSPECTIVE
+   ============================================================ */
+#envelope-wrapper {
+  position: relative;
+  /* C5 envelope — approx 1.41 : 1 width-to-height */
+  width: min(75vw, 520px);
+  aspect-ratio: 1.41 / 1;
+  perspective: 1100px;
+  z-index: 1;
+}
+
+/* ============================================================
+   ENVELOPE BODY
+   ============================================================ */
+#envelope {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+/* --- Back face (base rectangle, always visible) --- */
+#envelope-back {
+  position: absolute;
+  inset: 0;
+  background:
+    url("https://www.transparenttextures.com/patterns/paper-fibers.png"),
+    linear-gradient(160deg, #faf5ec 0%, #f0e8d5 55%, #e8dfc8 100%);
+  border-radius: 3px 3px 10px 10px;
+  border: 1px solid rgba(203, 192, 160, 0.30);
+  box-shadow:
+    0 28px 64px rgba(95, 94, 43, 0.16),
+    0 8px 22px rgba(0,   0,   0,  0.09),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
+  z-index: 1;
+}
+
+/* Bottom V fold — the triangular crease pointing up from the bottom */
+#envelope-back::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 56%;
+  background:
+    url("https://www.transparenttextures.com/patterns/paper-fibers.png"),
+    linear-gradient(175deg, #ede6d4 0%, #e3d8c3 100%);
+  clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+  border-radius: 0 0 8px 8px;
+}
+
+/* Left / right side diagonal crease lines */
+#envelope-back::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(95deg,  rgba(220, 208, 185, 0.55) 0%, transparent 28%),
+    linear-gradient(265deg, rgba(220, 208, 185, 0.55) 0%, transparent 28%);
+  border-radius: 3px 3px 10px 10px;
+  pointer-events: none;
+}
+
+/* --- Front lower face (sits on top of the back, z:2) --- */
+#envelope-front {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 58%;
+  background:
+    url("https://www.transparenttextures.com/patterns/paper-fibers.png"),
+    linear-gradient(6deg, #fdf9f2 0%, #f5eedf 100%);
+  border-radius: 0 0 9px 9px;
+  border: 1px solid rgba(203, 192, 160, 0.28);
+  border-top: none;
+  box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.04);
+  z-index: 2;
+}
+
+/* ============================================================
+   ENVELOPE FLAP (top triangle — rotates open)
+   transform-origin: top center so it folds away from viewer.
+   ============================================================ */
+#envelope-flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56%;
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  background:
+    url("https://www.transparenttextures.com/patterns/paper-fibers.png"),
+    linear-gradient(172deg, #fdfaf5 0%, #f2e9d8 65%, #e8dfc8 100%);
+  border-top: 1px solid rgba(203, 192, 160, 0.22);
+  transform-origin: top center;
+  transform-style: preserve-3d;
+  /* Subtle crease shadow at the fold line */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+  z-index: 4;
+  transition: transform 1000ms cubic-bezier(0.34, 1.18, 0.64, 1);
+  will-change: transform;
+}
+
+/* Back of flap (visible after rotation) — slightly darker parchment */
+#envelope-flap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    url("https://www.transparenttextures.com/patterns/paper-fibers.png"),
+    linear-gradient(172deg, #e5ddd0 0%, #d8cdb8 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  transform: rotateX(180deg);
+  backface-visibility: visible;
+}
+
+/* Open state — fold the flap back over the envelope */
+#envelope-flap.flap-open {
+  transform: rotateX(-175deg);
+}
+
+/* ============================================================
+   WAX SEAL
+   ============================================================ */
+#wax-seal {
+  /* Positioned at the fold line between flap and front face */
+  position: absolute;
+  left: 50%;
+  top: 47%;
+  transform: translate(-50%, -50%);
+  width: clamp(58px, 11vw, 88px);
+  height: clamp(58px, 11vw, 88px);
+  z-index: 10;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+#wax-seal svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 5px 15px rgba(95, 94, 43, 0.42))
+          drop-shadow(0 2px 5px rgba(0, 0, 0, 0.18));
+  transition: filter 300ms ease, transform 200ms ease;
+  display: block;
+}
+
+#wax-seal:hover svg {
+  filter: drop-shadow(0 7px 20px rgba(95, 94, 43, 0.58))
+          drop-shadow(0 3px 8px rgba(0, 0, 0, 0.22));
+  transform: scale(1.04);
+}
+
+#wax-seal:focus-visible {
+  outline: 2px dashed rgba(95, 94, 43, 0.5);
+  outline-offset: 6px;
+  border-radius: 50%;
+}
+
+/* Breathing pulse ring — draws attention */
+#wax-seal::after {
+  content: '';
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(95, 94, 43, 0.22);
+  animation: sealPulse 2.6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes sealPulse {
+  0%, 100% { transform: scale(1.00); opacity: 0.7; }
+  50%       { transform: scale(1.22); opacity: 0.0; }
+}
+
+/* Breaking animation — triggered by JS */
+#wax-seal.seal-breaking {
+  animation: sealBreak 700ms ease-in-out forwards;
+  pointer-events: none;
+}
+
+/* Break: slight compress → expand → disappear */
+@keyframes sealBreak {
+  0%   { transform: translate(-50%, -50%) scale(1.00) rotate(0deg);   opacity: 1.0; }
+  18%  { transform: translate(-50%, -50%) scale(0.91) rotate(-2.5deg); opacity: 1.0; }
+  52%  { transform: translate(-50%, -50%) scale(1.07) rotate(4deg);   opacity: 0.85; }
+  100% { transform: translate(-50%, -50%) scale(0.00) rotate(10deg);  opacity: 0.0; }
+}
+
+/* ============================================================
+   OPEN HINT TEXT
+   ============================================================ */
+#open-hint {
+  position: absolute;
+  bottom: -46px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: clamp(11px, 2.2vw, 14px);
+  letter-spacing: 0.14em;
+  color: #79776a;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  animation: hintBreath 2.8s ease-in-out infinite alternate;
+}
+
+@keyframes hintBreath {
+  from { opacity: 0.30; transform: translateX(-50%) translateY(0px);  }
+  to   { opacity: 0.80; transform: translateX(-50%) translateY(-4px); }
+}
+
+/* ============================================================
+   REDUCED MOTION — skip everything, show page immediately
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  #envelope-overlay {
+    display: none !important;
+  }
+  #invitation-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: all !important;
+  }
+  body.env-locked {
+    overflow: auto !important;
+  }
+}

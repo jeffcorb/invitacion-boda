@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>JEFFERSON &amp; KARI | Wedding Invitation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&amp;family=Montserrat:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="envelope.css"/>
+<link rel="stylesheet" href="guest-lookup.css"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#fbf9f8",
+                    "inverse-on-surface": "#f2f0f0",
+                    "tertiary-fixed": "#e4e2dd",
+                    "secondary": "#745b22",
+                    "primary-fixed-dim": "#cbca8b",
+                    "tertiary-fixed-dim": "#c8c6c2",
+                    "on-tertiary-container": "#fefcf7",
+                    "tertiary": "#5c5c58",
+                    "surface-container-highest": "#e4e2e2",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-variant": "#e4e2e2",
+                    "surface-container-high": "#eae8e7",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#303030",
+                    "error-container": "#ffdad6",
+                    "on-background": "#1b1c1c",
+                    "surface-dim": "#dbdad9",
+                    "on-surface": "#1b1c1c",
+                    "primary-fixed": "#e8e6a5",
+                    "on-secondary-container": "#785f26",
+                    "surface-container-low": "#f5f3f3",
+                    "primary-container": "#787741",
+                    "on-primary-fixed-variant": "#494918",
+                    "on-surface-variant": "#48473b",
+                    "on-primary-container": "#fffbff",
+                    "surface-container": "#efeded",
+                    "surface-bright": "#fbf9f8",
+                    "on-error": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#61612d",
+                    "on-secondary-fixed-variant": "#5a430c",
+                    "surface": "#fbf9f8",
+                    "error": "#ba1a1a",
+                    "on-error-container": "#93000a",
+                    "outline-variant": "#cac7b7",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed": "#ffdf9e",
+                    "secondary-container": "#fedb96",
+                    "on-secondary-fixed": "#261a00",
+                    "primary": "#5f5e2b",
+                    "on-tertiary-fixed": "#1b1c19",
+                    "tertiary-container": "#757571",
+                    "inverse-primary": "#cbca8b",
+                    "on-tertiary-fixed-variant": "#474744",
+                    "on-primary-fixed": "#1d1d00",
+                    "outline": "#79776a",
+                    "secondary-fixed-dim": "#e3c27f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "container-max": "1120px",
+                    "gutter": "24px",
+                    "section-gap": "80px",
+                    "unit": "8px",
+                    "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Cinzel", "serif"],
+                    "body-lg": ["Montserrat", "sans-serif"],
+                    "label-caps": ["Cormorant Garamond", "serif"],
+                    "headline-md": ["Cormorant Garamond", "serif"],
+                    "headline-lg": ["Cormorant Garamond", "serif"],
+                    "body-md": ["Montserrat", "sans-serif"],
+                    "headline-lg-mobile": ["Cormorant Garamond", "serif"],
+                    "editorial": ["Cormorant Garamond", "serif"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "0.15em", "fontWeight": "400"}],
+                    "body-lg": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.02em", "fontWeight": "300"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.2em", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "letterSpacing": "0.05em", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "400"}],
+                    "body-md": ["14px", {"lineHeight": "1.5", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "letterSpacing": "0.08em", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .paper-texture {
+            background-color: #ffffff;
+            background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+
+<!-- ============================================================
+     ENVELOPE OPENING OVERLAY
+     Visible on first load; removed after animation completes.
+     ============================================================ -->
+<div id="envelope-overlay" role="dialog" aria-label="Invitación de boda" aria-modal="true">
+    <!-- Soft luxury ambient background -->
+    <div id="luxury-bg"></div>
+
+    <!-- Envelope + hint text -->
+    <div id="envelope-wrapper">
+        <div id="envelope">
+            <!-- Base rectangle -->
+            <div id="envelope-back"></div>
+            <!-- Lower front face -->
+            <div id="envelope-front"></div>
+            <!-- Top flap — rotates open on click -->
+            <div id="envelope-flap"></div>
+
+            <!-- Botón Ingresar — abre el lookup de invitados -->
+            <button id="wax-seal" aria-label="Ingresar a la invitación">
+                Ingresar
+            </button>
+        </div>
+
+        <!-- Hint debajo del sobre -->
+        <p id="open-hint" aria-hidden="true">Ingresa tu nombre para abrir</p>
+    </div>
+</div>
+
+<!-- ============================================================
+     GUEST LOOKUP OVERLAY
+     Aparece sobre el sobre al hacer clic en "Ingresar".
+     ============================================================ -->
+<div id="guest-lookup-overlay" role="dialog" aria-modal="true" aria-label="Verificar invitación" style="display:none;">
+    <div id="guest-lookup-card">
+        <h2 id="gl-title">Verifica tu invitación</h2>
+        <p id="gl-subtitle">Escribe tu nombre para continuar</p>
+
+        <div id="gl-input-wrapper">
+            <input id="guest-input" type="text" placeholder="Tu nombre..." autocomplete="off" spellcheck="false"/>
+            <div id="gl-suggestions" role="listbox" aria-label="Sugerencias"></div>
+        </div>
+
+        <button id="gl-btn" type="button">Ingresar</button>
+
+        <div id="gl-result" role="status" aria-live="polite"></div>
+    </div>
+</div>
+
+<!-- ============================================================
+     INVITATION REVEAL WRAPPER
+     The entire page fades and scales in after the envelope opens.
+     ============================================================ -->
+<div id="invitation-reveal">
+
+<!-- Fixed Background -->
+<div class="fixed inset-0 z-[-1] opacity-40 parallax-bg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCFMBZNVl2pw18zAqtOB_gLAdCDS5XV4fGikrv05dYrCVA1FhQwfZGlvGqORGcEG_jqSuizuYhDaHXItSjGm_ltmGanWO5eV2sQImUEStnhlSQYITpDlydPC5T_u1-1g-WdFmJ7qfbNpIxyLr0Ot3xO1grRFWSKyuePfiI7ujRbpJt7gBnT-E_fz90KaV6AakJewhtCRF1JFHveIHRQWFeiLJsduxXRN-ESwDEQ0Zy6AlfPDk4YINCxtwQAe8XHzL6TuI24Wh0dmt8');"></div>
+
+<!-- Top Music Player -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant/30 px-margin-mobile md:px-margin-desktop py-3">
+    <div class="max-w-container-max mx-auto flex flex-col items-center gap-2">
+        <span class="font-editorial italic text-[11px] tracking-widest text-primary uppercase">Dale clic y escucha nuestra canción</span>
+        <div class="flex items-center gap-6 text-primary">
+            <button class="material-symbols-outlined cursor-pointer hover:opacity-60 transition-opacity">skip_previous</button>
+            <button class="material-symbols-outlined cursor-pointer hover:opacity-60 transition-opacity text-3xl" id="playBtn">play_circle</button>
+            <button class="material-symbols-outlined cursor-pointer hover:opacity-60 transition-opacity">skip_next</button>
+            <div class="hidden md:block w-32 h-[2px] bg-outline-variant/30 relative">
+                <div class="absolute left-0 top-0 h-full bg-primary w-1/3"></div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main class="pt-24 pb-section-gap px-margin-mobile max-w-[600px] mx-auto space-y-12">
+
+    <!-- Hero Section -->
+    <section class="reveal active relative">
+        <div class="paper-texture p-12 rounded-[20px] shadow-xl border border-outline-variant/20 flex flex-col items-center text-center relative overflow-hidden">
+            <p class="font-editorial italic text-2xl text-tertiary mb-2">¡Nos Casamos!</p>
+            <h1 class="font-display-lg text-primary text-4xl md:text-5xl my-10 tracking-[0.2em] leading-tight">
+                KARI<br/>&amp;<br/>JEFF
+            </h1>
+            <p class="font-editorial italic text-lg text-tertiary max-w-[280px] leading-relaxed mb-12">
+                Acompáñanos a celebrar el comienzo de nuestra nueva historia.
+            </p>
+        </div>
+
+        <!-- Bendición y padres -->
+        <div class="paper-texture p-12 rounded-[20px] shadow-xl border border-outline-variant/20 flex flex-col items-center text-center relative overflow-hidden mt-6">
+            <p class="font-editorial italic text-xl text-tertiary mb-8">Con la bendición de Dios y nuestros padres</p>
+            <div class="grid grid-cols-2 gap-8 w-full">
+                <div class="space-y-2">
+                    <p class="font-body-md text-[12px] uppercase tracking-widest text-primary font-bold mb-3">Padres de la Novia</p>
+                    <p class="font-editorial italic text-lg text-on-background">Percy Hernández Ramos</p>
+                    <p class="font-editorial italic text-lg text-on-background">Irma Obregón Vega</p>
+                </div>
+                <div class="space-y-2">
+                    <p class="font-body-md text-[12px] uppercase tracking-widest text-primary font-bold mb-3">Padres del Novio</p>
+                    <p class="font-editorial italic text-lg text-on-background">Benito Corbera Marín</p>
+                    <p class="font-editorial italic text-lg text-on-background">Nilda Santillán Mendoza</p>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-outline-variant/30 w-full space-y-2">
+                <p class="font-body-md text-[12px] uppercase tracking-widest text-primary font-bold mb-3">Padrinos</p>
+                <p class="font-editorial italic text-lg text-on-background">Jorge Corbera Marín</p>
+                <p class="font-editorial italic text-lg text-on-background">Tereza Velazco Palomino</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Date Section -->
+    <section class="reveal">
+        <div class="paper-texture p-8 rounded-[20px] text-on-background text-center shadow-lg relative overflow-hidden border border-outline-variant/20">
+            <h2 class="font-display-lg text-2xl mb-6 tracking-widest text-primary">CELEBRA CON NOSOTROS</h2>
+            <div class="flex items-center justify-center gap-4 border-y border-primary/20 py-8">
+                <div class="text-right">
+                    <p class="font-editorial italic text-xl text-tertiary">Sábado</p>
+                </div>
+                <div class="px-6 border-x border-primary/20">
+                    <p class="font-display-lg text-5xl text-primary">26</p>
+                    <p class="font-body-md uppercase tracking-widest text-sm text-tertiary">Setiembre</p>
+                </div>
+                <div class="text-left">
+                    <p class="font-editorial italic text-xl text-tertiary">6:45 P.M.</p>
+                </div>
+            </div>
+            <div class="mt-8 flex justify-center opacity-80">
+                <img alt="Wedding Couple Illustration" class="w-48 h-auto" style="border-radius: 50% / 28%; object-fit: cover;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxKazUxICTAnuExXlUZZxkEgiISkAnl8QFZB1KZ2J0y-uxacy2Tftb5Xs8YKC3Jx78KqfWAVNraWhKTMrzKXgf5Hy5PdDkSzUm31xGiGFEGNZc8oekB7F5Sknp57-xyk4Zwso89HBjW0yKLwaygNZoKEr-ZenJ8Nl5PDqVljtxsAZinEC6rElETg4N6Z8Cha0IV-oiVmI2oOUcvFx7nZgxPHzF6yVBZKwz2nLtElxh45sODqBHyBT_Z0cZe2g-MuaAmizjye7gCRw"/>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown -->
+    <section class="reveal text-center space-y-3">
+        <p class="font-display-lg text-primary text-4xl tracking-widest">¡Prepárate!</p>
+        <p class="font-editorial italic text-lg text-tertiary">Nos vemos dentro de:</p>
+    </section>
+    <section class="reveal flex justify-center gap-6 text-center -mt-4">
+        <div class="flex flex-col">
+            <span class="font-display-lg text-3xl text-primary" id="days">00</span>
+            <span class="font-editorial italic text-xs uppercase tracking-widest text-tertiary">Días</span>
+        </div>
+        <div class="flex flex-col">
+            <span class="font-display-lg text-3xl text-primary" id="hours">00</span>
+            <span class="font-editorial italic text-xs uppercase tracking-widest text-tertiary">Hrs</span>
+        </div>
+        <div class="flex flex-col">
+            <span class="font-display-lg text-3xl text-primary" id="minutes">00</span>
+            <span class="font-editorial italic text-xs uppercase tracking-widest text-tertiary">Min</span>
+        </div>
+        <div class="flex flex-col">
+            <span class="font-display-lg text-3xl text-primary" id="seconds">00</span>
+            <span class="font-editorial italic text-xs uppercase tracking-widest text-tertiary">Seg</span>
+        </div>
+    </section>
+
+    <!-- Event Cards -->
+    <div class="grid grid-cols-1 gap-8">
+        <!-- Ceremonia Civil -->
+        <section class="reveal paper-texture p-8 rounded-[20px] shadow-md border border-outline-variant/10 text-center">
+            <div class="mb-4 flex justify-center text-primary">
+                <span class="material-symbols-outlined text-4xl">church</span>
+            </div>
+            <h3 class="font-display-lg text-xl tracking-widest mb-4">CEREMONIA RELIGIOSA</h3>
+            <p class="font-editorial italic text-lg mb-2">Parroquia El Buen Pastor</p>
+            <p class="font-body-md text-sm text-tertiary mb-8">Calle Galileo Galilei 7590, Los Olivos</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                <a class="inline-flex items-center gap-2 px-6 py-3 border border-primary text-primary font-body-md text-xs uppercase tracking-[0.2em] hover:bg-primary hover:text-white transition-all rounded-full" href="https://maps.app.goo.gl/1ZnAHeymYyKgTS8K7" target="_blank" rel="noopener">
+                    <span class="material-symbols-outlined text-sm">location_on</span>
+                    Google Maps
+                </a>
+                <a class="inline-flex items-center gap-2 px-6 py-3 border border-primary text-primary font-body-md text-xs uppercase tracking-[0.2em] hover:bg-primary hover:text-white transition-all rounded-full" href="https://m.uber.com/ul/?action=setPickup&dropoff[latitude]=-11.997819&dropoff[longitude]=-77.063214" target="_blank" rel="noopener">
+                    <span class="material-symbols-outlined text-sm">local_taxi</span>
+                    Solicitar un Taxi
+                </a>
+            </div>
+            <div class="mt-8 opacity-40 flex justify-center">
+                <img alt="Botanical Flourish" class="w-32 rotate-180" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgVV5bizs-mD4_ItO-Jku4VCCc4L7eyz2UgGiW712abMboGk8Pr1Dw5IVm67vn7RKnmhkCFK6mfe0pg_34lMXEGgzfsYp6AH5WsyTm9qy5IJ13sbpjmCBmv3CKHV_y_-00lB-zHo8YmD0oQMc2O3XYtS1yT06FQ7B1WqPqhGJkN9gzWgc2CaffW95s6OjEyletbco7Q81DdQTeNkToM7ERfuLVw1eyArVu6ip1nbb17qOoAbjXggXQPC2wxOZ1E2eSz3lw6__COtY"/>
+            </div>
+        </section>
+
+        <!-- Recepción -->
+        <section class="reveal paper-texture p-8 rounded-[20px] shadow-md border border-outline-variant/10 text-center">
+            <div class="mb-4 flex justify-center text-primary">
+                <span class="material-symbols-outlined text-4xl">restaurant</span>
+            </div>
+            <h3 class="font-display-lg text-xl tracking-widest mb-4">RECEPCIÓN</h3>
+            <p class="font-editorial italic text-lg mb-2">Casa Hacienda Bocanegra</p>
+            <p class="font-body-md text-sm text-tertiary mb-8">Jose Valle Skinner 220, Callao 07031</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                <a class="inline-flex items-center gap-2 px-6 py-3 border border-primary text-primary font-body-md text-xs uppercase tracking-[0.2em] hover:bg-primary hover:text-white transition-all rounded-full" href="https://maps.app.goo.gl/4cYftw57kHWpNmGz6" target="_blank" rel="noopener">
+                    <span class="material-symbols-outlined text-sm">location_on</span>
+                    Google Maps
+                </a>
+                <a class="inline-flex items-center gap-2 px-6 py-3 border border-primary text-primary font-body-md text-xs uppercase tracking-[0.2em] hover:bg-primary hover:text-white transition-all rounded-full" href="https://m.uber.com/ul/?action=setPickup&dropoff[latitude]=-12.013867&dropoff[longitude]=-77.113280" target="_blank" rel="noopener">
+                    <span class="material-symbols-outlined text-sm">local_taxi</span>
+                    Solicitar un Taxi
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Dress Code -->
+    <section class="reveal paper-texture p-10 rounded-[20px] shadow-md border border-outline-variant/10">
+        <h3 class="font-display-lg text-center text-xl tracking-widest mb-8">CÓDIGO DE VESTIMENTA FORMAL</h3>
+        <p class="font-editorial italic text-xl text-primary text-center mb-8">Terno completo · Vestido largo</p>
+        <p class="font-editorial italic text-base text-tertiary text-center leading-relaxed border-t border-outline-variant/30 pt-6">
+            Para nuestras invitadas, agradeceremos evitar los tonos blanco, ivory, crema, champagne y la gama de verdes (salvia, eucalipto y oliva), reservados para la novia y nuestro círculo más cercano.
+        </p>
+    </section>
+
+    <!-- Itinerario -->
+    <section class="reveal paper-texture p-8 rounded-[20px] shadow-md border border-outline-variant/10">
+        <h3 class="font-display-lg text-center text-xl tracking-widest mb-8">ITINERARIO</h3>
+        <img src="itinerario.png?v=2" alt="Itinerario: Ceremonia Parroquia el Buen Pastor 6:45 PM · Recepción Hacienda Bocanegra 9:00 PM · Brindis Llegada de Novios 9:30 PM · Comienza la fiesta 10:00 PM" class="w-full h-auto object-contain rounded-xl"/>
+    </section>
+
+    <!-- Gallery -->
+    <section class="reveal">
+        <h3 class="font-display-lg text-center text-xl tracking-widest mb-8">GALERÍA</h3>
+        <div class="grid grid-cols-2 gap-3">
+            <div class="overflow-hidden rounded-xl shadow-md transition-transform hover:scale-[1.02] duration-500 aspect-square">
+                <img class="w-full h-full object-cover" alt="Foto de Kari y Jeff" src="WhatsApp Image 2026-07-05 at 10.31.42 PM.jpeg"/>
+            </div>
+            <div class="overflow-hidden rounded-xl shadow-md transition-transform hover:scale-[1.02] duration-500 aspect-square">
+                <img class="w-full h-full object-cover" alt="Foto de Kari y Jeff" src="WhatsApp Image 2026-07-05 at 10.32.57 PM.jpeg"/>
+            </div>
+            <div class="col-span-2 overflow-hidden rounded-xl shadow-md transition-transform hover:scale-[1.02] duration-500 aspect-video">
+                <img class="w-full h-full object-cover" alt="Foto de Kari y Jeff" src="WhatsApp Image 2026-07-05 at 10.34.44 PM.jpeg"/>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gift Registry -->
+    <section class="reveal paper-texture p-10 rounded-[20px] shadow-md border border-outline-variant/10 text-center">
+        <span class="material-symbols-outlined text-4xl text-secondary mb-6">card_giftcard</span>
+        <h3 class="font-display-lg text-xl tracking-widest mb-4">DETALLES PARA LOS NOVIOS</h3>
+        <p class="font-editorial italic text-lg text-tertiary mb-8">Tu presencia es nuestro mayor regalo. Si deseas tener un detalle con nosotros, encontrarás nuestras opciones aquí.</p>
+        <button onclick="document.getElementById('regalo-modal').classList.remove('hidden')" class="w-full py-4 bg-primary text-white font-body-md text-xs uppercase tracking-[0.2em] rounded-full hover:bg-secondary transition-colors">
+            Ver Detalles
+        </button>
+    </section>
+
+
+    <!-- Solo adultos -->
+    <section class="reveal paper-texture p-10 rounded-[20px] shadow-md border border-outline-variant/10 text-center">
+        <h3 class="font-display-lg text-xl tracking-widest text-primary mb-6">Celebración sin Niños</h3>
+        <img src="copas.png" alt="Copas de celebración" class="w-28 h-auto object-contain mx-auto my-6"/>
+        <p class="font-editorial italic text-lg text-tertiary leading-relaxed max-w-[320px] mx-auto">
+            Nos encantaría que disfruten de nuestra boda con total tranquilidad, por eso hemos optado por una celebración solo para adultos.
+        </p>
+    </section>
+
+    <!-- RSVP -->
+    <section class="reveal paper-texture p-10 rounded-[20px] shadow-xl border border-outline-variant/10 text-center">
+        <h3 class="font-display-lg text-center text-2xl tracking-widest mb-4">CONFIRMA TU ASISTENCIA</h3>
+        <p class="font-editorial italic text-lg text-tertiary mb-2">¿Nos acompañas? Confirma tu asistencia con un clic.</p>
+        <p class="font-editorial italic text-lg text-tertiary mb-8">Confirmar asistencia con anticipación, a más tardar el <strong>31 de Julio</strong>.</p>
+        <!-- Campos de acompañantes — se generan dinámicamente según los pases -->
+        <div id="rsvp-companions" class="w-full space-y-6 mb-2"></div>
+
+        <button id="rsvp-btn" class="w-full py-4 bg-primary text-white font-body-md text-xs uppercase tracking-[0.2em] rounded-full hover:shadow-lg transition-all transform active:scale-[0.98]">
+            Confirmar Asistencia
+        </button>
+        <div id="rsvp-result" class="mt-6 font-editorial italic text-base"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="reveal pt-16 text-center space-y-6">
+        <div class="flex justify-center opacity-30">
+            <img alt="Botanical Divider" class="w-24" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgVV5bizs-mD4_ItO-Jku4VCCc4L7eyz2UgGiW712abMboGk8Pr1Dw5IVm67vn7RKnmhkCFK6mfe0pg_34lMXEGgzfsYp6AH5WsyTm9qy5IJ13sbpjmCBmv3CKHV_y_-00lB-zHo8YmD0oQMc2O3XYtS1yT06FQ7B1WqPqhGJkN9gzWgc2CaffW95s6OjEyletbco7Q81DdQTeNkToM7ERfuLVw1eyArVu6ip1nbb17qOoAbjXggXQPC2wxOZ1E2eSz3lw6__COtY"/>
+        </div>
+        <p class="font-display-lg text-primary text-xl tracking-[0.2em]">OUR FOREVER STARTS HERE.</p>
+        <p class="font-editorial italic text-sm text-tertiary">Jefferson &amp; Kari &copy; 2025</p>
+    </footer>
+
+</main>
+
+</div><!-- /#invitation-reveal -->
+
+<!-- Modal Mesa de Regalos — fuera de #invitation-reveal para evitar conflicto con transform -->
+<div id="regalo-modal" class="hidden fixed inset-0 z-[9998] flex items-center justify-center px-5" role="dialog" aria-modal="true">
+    <div onclick="document.getElementById('regalo-modal').classList.add('hidden')" class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+    <div class="relative z-10 w-full max-w-sm paper-texture rounded-[20px] border border-outline-variant/20 shadow-2xl p-10 text-center">
+        <button onclick="document.getElementById('regalo-modal').classList.add('hidden')" class="absolute top-4 right-5 text-tertiary hover:text-primary transition-colors text-xl font-light leading-none">&times;</button>
+        <span class="material-symbols-outlined text-4xl text-secondary mb-4 block">card_giftcard</span>
+        <h3 class="font-display-lg text-lg tracking-widest text-primary mb-6">DETALLES PARA LOS NOVIOS</h3>
+        <p class="font-editorial italic text-lg text-tertiary leading-relaxed mb-6">
+            Gracias por acompañarnos en este día tan especial. Si deseas hacernos un obsequio, puedes hacerlo mediante cualquiera de las siguientes opciones:
+        </p>
+        <div class="space-y-4 text-left border-t border-outline-variant/30 pt-6">
+            <p class="font-body-md text-sm text-on-background"><span class="font-bold">Titular:</span> Karina Hernandez Obregon</p>
+            <div>
+                <p class="font-body-md text-[11px] uppercase tracking-widest text-primary font-bold mb-1">Cuenta BCP</p>
+                <div class="flex items-center justify-between gap-2">
+                    <div>
+                        <p class="font-body-md text-sm text-on-background">191-18036585-0-71</p>
+                        <p class="font-body-md text-xs text-tertiary">CCI: 00219111803658507157</p>
+                    </div>
+                    <button onclick="copyToClipboard('191-18036585-0-71', this)" class="shrink-0 px-3 py-1 border border-primary text-primary font-body-md text-[10px] uppercase tracking-widest rounded-full hover:bg-primary hover:text-white transition-all">
+                        Copiar
+                    </button>
+                </div>
+            </div>
+            <div>
+                <p class="font-body-md text-[11px] uppercase tracking-widest text-primary font-bold mb-1">Cuenta Interbank</p>
+                <div class="flex items-center justify-between gap-2">
+                    <div>
+                        <p class="font-body-md text-sm text-on-background">1323081569509</p>
+                        <p class="font-body-md text-xs text-tertiary">CCI: 00313201308156950988</p>
+                    </div>
+                    <button onclick="copyToClipboard('1323081569509', this)" class="shrink-0 px-3 py-1 border border-primary text-primary font-body-md text-[10px] uppercase tracking-widest rounded-full hover:bg-primary hover:text-white transition-all">
+                        Copiar
+                    </button>
+                </div>
+            </div>
+            <div>
+                <p class="font-body-md text-[11px] uppercase tracking-widest text-primary font-bold mb-1">Yape / Plin</p>
+                <div class="flex items-center justify-between gap-2">
+                    <p class="font-body-md text-sm text-on-background">946 883 647</p>
+                    <button onclick="copyToClipboard('946883647', this)" class="shrink-0 px-3 py-1 border border-primary text-primary font-body-md text-[10px] uppercase tracking-widest rounded-full hover:bg-primary hover:text-white transition-all">
+                        Copiar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Audio element — add your song src here -->
+<audio id="wedding-music" loop preload="auto">
+    <source src="Ytmp3.gg_YouTube_Vicente-Garcia-Carmesi-Video-Oficial_Media_ea4ovC_B6ow_009_128k.mp3" type="audio/mpeg"/>
+</audio>
+
+<script>
+    // Reveal elements on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    const revealOnScroll = () => {
+        reveals.forEach(element => {
+            const windowHeight = window.innerHeight;
+            const revealTop = element.getBoundingClientRect().top;
+            const revealPoint = 150;
+            if (revealTop < windowHeight - revealPoint) {
+                element.classList.add('active');
+            }
+        });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+
+    // Music Player Toggle — wired to the <audio> element
+    const playBtn   = document.getElementById('playBtn');
+    const audioEl   = document.getElementById('wedding-music');
+    let isPlaying   = false;
+
+    function syncPlayBtn(playing) {
+        isPlaying = playing;
+        playBtn.textContent = playing ? 'pause_circle' : 'play_circle';
+        playBtn.classList.toggle('fill-icon', playing);
+    }
+
+    playBtn.addEventListener('click', () => {
+        if (!audioEl) return;
+        if (isPlaying) {
+            audioEl.pause();
+            syncPlayBtn(false);
+        } else {
+            audioEl.play().then(() => syncPlayBtn(true)).catch(() => {});
+        }
+    });
+
+    // Keep button in sync if audio ends or is paused externally
+    if (audioEl) {
+        audioEl.addEventListener('pause', () => syncPlayBtn(false));
+        audioEl.addEventListener('play',  () => syncPlayBtn(true));
+    }
+
+    // Countdown Timer
+    const weddingDate = new Date("September 26, 2026 18:45:00").getTime();
+    const updateCountdown = () => {
+        const now = new Date().getTime();
+        const distance = weddingDate - now;
+
+        if (distance < 0) {
+            document.getElementById('days').textContent = '00';
+            document.getElementById('hours').textContent = '00';
+            document.getElementById('minutes').textContent = '00';
+            document.getElementById('seconds').textContent = '00';
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById('days').textContent = String(days).padStart(2, '0');
+        document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+        document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+        document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+    };
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // Copiar al portapapeles
+    function copyToClipboard(text, btn) {
+        navigator.clipboard.writeText(text).then(() => {
+            const original = btn.textContent;
+            btn.textContent = '¡Copiado!';
+            btn.classList.add('bg-primary', 'text-white');
+            setTimeout(() => {
+                btn.textContent = original;
+                btn.classList.remove('bg-primary', 'text-white');
+            }, 2000);
+        });
+    }
+
+    // --- Confirmar Asistencia → Google Sheets via Apps Script ---
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyi4bhCzFp3NEOnUix4SlKImEbTplHTbkw-n5-WBVeojPnmju7QY5-ofzEXOmDJHYdC/exec';
+
+    const rsvpBtn    = document.getElementById('rsvp-btn');
+    const rsvpResult = document.getElementById('rsvp-result');
+
+    if (rsvpBtn) {
+        rsvpBtn.addEventListener('click', () => {
+            const nombre = window.confirmedGuestName || 'Invitado';
+
+            rsvpBtn.disabled        = true;
+            rsvpBtn.textContent     = 'Enviando...';
+
+            // Usamos un iframe oculto + form para evitar bloqueos CORS de Apps Script
+            // Recoger nombres de acompañantes (checkbox marcado → "Sin acompañante")
+            const companions = Array.from(document.querySelectorAll('.companion-group')).map(group => {
+                const checkbox = group.querySelector('.companion-skip');
+                const input    = group.querySelector('.companion-input');
+                if (checkbox && checkbox.checked) return 'Sin acompañante';
+                return input ? input.value.trim() : '';
+            }).filter(v => v).join(' | ');
+
+            console.log('[RSVP] Nombre:', nombre);
+            console.log('[RSVP] Acompañantes:', companions || '(ninguno)');
+
+            const iframeName = 'rsvp_frame_' + Date.now();
+            const iframe = document.createElement('iframe');
+            iframe.name  = iframeName;
+            iframe.style.display = 'none';
+            document.body.appendChild(iframe);
+
+            const form = document.createElement('form');
+            form.method = 'GET';
+            form.action = APPS_SCRIPT_URL;
+            form.target = iframeName;
+
+            const fields = [['name', nombre], ['status', 'Confirmado']];
+            if (companions) fields.push(['companions', companions]);
+
+            fields.forEach(([k, v]) => {
+                const input = document.createElement('input');
+                input.type  = 'hidden';
+                input.name  = k;
+                input.value = v;
+                form.appendChild(input);
+            });
+
+            document.body.appendChild(form);
+            form.submit();
+
+            // Limpiar DOM y mostrar éxito tras 2 s (tiempo suficiente para que llegue)
+            setTimeout(() => {
+                document.body.removeChild(form);
+                document.body.removeChild(iframe);
+                rsvpBtn.textContent     = '¡Confirmado!';
+                rsvpResult.style.color  = '#5f5e2b';
+                rsvpResult.textContent  = `¡Gracias, ${nombre}! Te esperamos con mucho cariño.`;
+            }, 2000);
+        });
+    }
+</script>
+
+<!-- Envelope opening sequence (separate from page logic) -->
+<script src="envelope.js"></script>
+<!-- Guest lookup — debe cargarse después de envelope.js -->
+<script src="guest-lookup.js"></script>
+</body>
+</html>
