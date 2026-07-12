@@ -189,7 +189,7 @@
         <div class="companion-group space-y-3">
           <label class="flex items-center gap-2 cursor-pointer select-none w-fit">
             <input type="checkbox" class="companion-skip accent-[#5f5e2b] w-4 h-4 cursor-pointer" data-target="companion-${i + 1}"/>
-            <span class="font-body-md text-xs text-tertiary uppercase tracking-widest">No llevaré acompañante${num}</span>
+            <span class="font-body-md text-[10px] text-tertiary uppercase tracking-widest">No llevaré acompañante${num}</span>
           </label>
           <div class="relative">
             <input

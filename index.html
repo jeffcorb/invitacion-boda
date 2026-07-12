@@ -128,7 +128,7 @@
         }
     </style>
 </head>
-<body class="text-on-background font-body-md overflow-x-hidden" style="background-color: #fbf9f8; background-image: url('fondo.png'); background-repeat: repeat-y; background-position: center top; background-size: 85% auto;">
+<body class="text-on-background font-body-md overflow-x-hidden" style="background-color: #fbf9f8; background-image: url('fondo.png'); background-repeat: repeat-y; background-position: center top; background-size: 100vw calc(100vw * 16 / 9);">
 
 <!-- ============================================================
      ENVELOPE OPENING OVERLAY
@@ -201,37 +201,37 @@
     </div>
 </nav>
 
-<main class="pt-24 pb-section-gap px-margin-mobile max-w-[600px] mx-auto space-y-12">
+<main class="pt-24 pb-section-gap max-w-[420px] mx-auto space-y-12" style="padding-left: 28px; padding-right: 28px;">
 
     <!-- Hero Section -->
     <section class="reveal active relative">
         <div class="rounded-[20px] overflow-hidden shadow-xl relative">
             <img src="noscasamos.jpeg" alt="Kari & Jeff" class="w-full h-auto block"/>
             <!-- Overlay texto inferior -->
-            <div class="absolute bottom-0 left-0 right-0 px-8 py-8 text-center" style="background: linear-gradient(to top, rgba(27,28,28,0.72) 0%, transparent 100%);">
-                <p class="font-editorial italic text-2xl mb-2" style="color: rgba(245,240,232,0.85);">¡Nos Casamos!</p>
-                <h1 class="font-display-lg tracking-[0.2em] leading-tight mb-4" style="font-size: 3rem; color: #f5f0e8;">
+            <div class="absolute bottom-0 left-0 right-0 px-8 pb-8 pt-16 text-center" style="background: linear-gradient(to top, rgba(27,28,28,0.72) 0%, transparent 100%);">
+                <p class="font-editorial italic text-lg mb-2" style="color: rgba(245,240,232,0.85);">¡Nos Casamos!</p>
+                <h1 class="font-display-lg leading-tight mb-3" style="font-size: 1.5rem; letter-spacing: 0.06em; color: #f5f0e8;">
                     KARI<br/>&amp;<br/>JEFF
                 </h1>
-                <p class="font-editorial italic text-base leading-relaxed" style="color: rgba(245,240,232,0.75);">
+                <p class="font-editorial italic text-sm leading-relaxed" style="color: rgba(245,240,232,0.75);">
                     Acompáñanos a celebrar el comienzo<br/>de nuestra nueva historia.
                 </p>
             </div>
         </div>
 
         <!-- Bendición y padres -->
-        <div class="paper-texture p-10 rounded-[20px] shadow-xl border border-outline-variant/20 flex flex-col items-center text-center mt-6">
-            <p class="font-editorial italic text-xl text-tertiary mb-8">Con la bendición de Dios y nuestros padres</p>
-            <div class="flex flex-col gap-8 w-full">
-                <div class="space-y-2">
-                    <p class="font-body-md text-[12px] uppercase tracking-widest text-primary font-bold mb-3">Padres de la Novia</p>
-                    <p class="font-editorial italic text-lg text-on-background">Percy Hernández Ramos</p>
-                    <p class="font-editorial italic text-lg text-on-background">Irma Obregón Vega</p>
+        <div class="paper-texture px-6 py-6 rounded-[20px] shadow-xl border border-outline-variant/20 flex flex-col items-center text-center mt-6">
+            <p class="font-editorial italic text-sm text-tertiary mb-4">Con la bendición de Dios y nuestros padres</p>
+            <div class="flex flex-col gap-4 w-full">
+                <div class="space-y-1">
+                    <p class="font-body-md text-[10px] uppercase tracking-widest text-primary font-bold mb-2">Padres de la Novia</p>
+                    <p class="font-editorial italic text-sm text-on-background">Percy Hernández Ramos</p>
+                    <p class="font-editorial italic text-sm text-on-background">Irma Obregón Vega</p>
                 </div>
-                <div class="space-y-2 border-t border-outline-variant/20 pt-8">
-                    <p class="font-body-md text-[12px] uppercase tracking-widest text-primary font-bold mb-3">Padres del Novio</p>
-                    <p class="font-editorial italic text-lg text-on-background">Benito Corbera Marín</p>
-                    <p class="font-editorial italic text-lg text-on-background">Nilda Santillán Mendoza</p>
+                <div class="space-y-1 border-t border-outline-variant/20 pt-4">
+                    <p class="font-body-md text-[10px] uppercase tracking-widest text-primary font-bold mb-2">Padres del Novio</p>
+                    <p class="font-editorial italic text-sm text-on-background">Benito Corbera Marín</p>
+                    <p class="font-editorial italic text-sm text-on-background">Nilda Santillán Mendoza</p>
                 </div>
             </div>
         </div>
@@ -244,7 +244,7 @@
       <!-- Tarjeta paper — z inferior, padding extra abajo para dar espacio al chip -->
       <section class="reveal relative z-0">
         <div class="paper-texture pt-8 px-8 pb-16 rounded-[24px] text-on-background text-center shadow-lg border border-outline-variant/20">
-          <h2 class="font-display-lg text-2xl mb-6 tracking-widest text-primary">CELEBRA CON NOSOTROS</h2>
+          <h2 class="font-display-lg text-base mb-6 tracking-widest text-primary">CELEBRA CON NOSOTROS</h2>
           <div class="flex items-center justify-center gap-4 border-y border-primary/20 py-6">
             <div class="text-right">
               <p class="font-editorial italic text-xl text-tertiary">Sábado</p>
@@ -333,10 +333,10 @@
     </div>
 
     <!-- Dress Code -->
-    <section class="reveal p-10 rounded-[20px] shadow-md" style="background-color: #6D4C41;">
-        <h3 class="font-display-lg text-center text-xl tracking-widest mb-8" style="color: #f5ede8;">CÓDIGO DE VESTIMENTA FORMAL</h3>
-        <p class="font-editorial italic text-xl text-center mb-8" style="color: #f5ede8;">Terno completo · Vestido largo</p>
-        <p class="font-editorial italic text-base text-center leading-relaxed pt-6" style="color: rgba(245,237,232,0.70); border-top: 1px solid rgba(245,237,232,0.25);">
+    <section class="reveal px-6 py-6 rounded-[20px] shadow-md" style="background-color: #6D4C41;">
+        <h3 class="font-display-lg text-center text-sm tracking-widest mb-3" style="color: #f5ede8;">CÓDIGO DE VESTIMENTA FORMAL</h3>
+        <p class="font-editorial italic text-base text-center mb-3" style="color: #f5ede8;">Terno completo · Vestido largo</p>
+        <p class="font-editorial italic text-xs text-center leading-relaxed pt-3" style="color: rgba(245,237,232,0.70); border-top: 1px solid rgba(245,237,232,0.25);">
             Para nuestras invitadas, agradeceremos evitar los tonos blanco, ivory, crema, champagne y la gama de verdes (salvia, eucalipto y oliva), reservados para la novia y nuestro círculo más cercano.
         </p>
     </section>
@@ -364,30 +364,30 @@
     </section>
 
     <!-- Gift Registry -->
-    <section class="reveal paper-texture p-10 rounded-[20px] shadow-md border border-outline-variant/10 text-center">
-        <span class="material-symbols-outlined text-4xl text-secondary mb-6">card_giftcard</span>
-        <h3 class="font-display-lg text-xl tracking-widest mb-4">DETALLES PARA LOS NOVIOS</h3>
-        <p class="font-editorial italic text-lg text-tertiary mb-8">Tu presencia es nuestro mayor regalo. Si deseas tener un detalle con nosotros, encontrarás nuestras opciones aquí.</p>
-        <button onclick="document.getElementById('regalo-modal').classList.remove('hidden')" class="w-full py-4 bg-primary text-white font-body-md text-xs uppercase tracking-[0.2em] rounded-full hover:bg-secondary transition-colors">
+    <section class="reveal paper-texture px-6 py-6 rounded-[20px] shadow-md border border-outline-variant/10 text-center">
+        <span class="material-symbols-outlined text-2xl text-secondary mb-3">card_giftcard</span>
+        <h3 class="font-display-lg text-sm tracking-widest mb-3">DETALLES PARA LOS NOVIOS</h3>
+        <p class="font-editorial italic text-xs text-tertiary mb-4">Tu presencia es nuestro mayor regalo. Si deseas tener un detalle con nosotros, encontrarás nuestras opciones aquí.</p>
+        <button onclick="document.getElementById('regalo-modal').classList.remove('hidden')" class="w-full py-3 bg-primary text-white font-body-md text-xs uppercase tracking-[0.2em] rounded-full hover:bg-secondary transition-colors">
             Ver Detalles
         </button>
     </section>
 
 
     <!-- Solo adultos -->
-    <section class="reveal paper-texture p-10 rounded-[20px] shadow-md border border-outline-variant/10 text-center">
-        <h3 class="font-display-lg text-xl tracking-widest text-primary mb-6">Celebración sin Niños</h3>
-        <img src="copas.png" alt="Copas de celebración" class="w-28 h-auto object-contain mx-auto my-6"/>
-        <p class="font-editorial italic text-lg text-tertiary leading-relaxed max-w-[320px] mx-auto">
+    <section class="reveal paper-texture px-6 py-6 rounded-[20px] shadow-md border border-outline-variant/10 text-center">
+        <h3 class="font-display-lg text-sm tracking-widest text-primary mb-3">Celebración sin Niños</h3>
+        <img src="copas.png" alt="Copas de celebración" class="w-16 h-auto object-contain mx-auto my-3"/>
+        <p class="font-editorial italic text-xs text-tertiary leading-relaxed mx-auto">
             Nos encantaría que disfruten de nuestra boda con total tranquilidad, por eso hemos optado por una celebración solo para adultos.
         </p>
     </section>
 
     <!-- RSVP -->
-    <section class="reveal paper-texture p-10 rounded-[20px] shadow-xl border border-outline-variant/10 text-center">
-        <h3 class="font-display-lg text-center text-2xl tracking-widest mb-4">CONFIRMA TU ASISTENCIA</h3>
-        <p class="font-editorial italic text-lg text-tertiary mb-2">¿Nos acompañas? Confirma tu asistencia con un clic.</p>
-        <p class="font-editorial italic text-lg text-tertiary mb-8">Confirmar asistencia con anticipación, a más tardar el <strong>31 de Julio</strong>.</p>
+    <section class="reveal paper-texture px-6 py-6 rounded-[20px] shadow-xl border border-outline-variant/10 text-center">
+        <h3 class="font-display-lg text-center text-sm tracking-widest mb-3">CONFIRMA TU ASISTENCIA</h3>
+        <p class="font-editorial italic text-sm text-tertiary mb-2">¿Nos acompañas? Confirma tu asistencia con un clic.</p>
+        <p class="font-editorial italic text-sm text-tertiary mb-4">Confirmar asistencia con anticipación, a más tardar el <strong>31 de Julio</strong>.</p>
         <!-- Campos de acompañantes — se generan dinámicamente según los pases -->
         <div id="rsvp-companions" class="w-full space-y-6 mb-2"></div>
 
