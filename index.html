@@ -207,14 +207,8 @@
 
     <!-- Hero Section -->
     <section class="reveal active relative">
-        <div class="paper-texture p-12 rounded-[20px] shadow-xl border border-outline-variant/20 flex flex-col items-center text-center relative overflow-hidden">
-            <p class="font-editorial italic text-2xl text-tertiary mb-2">¡Nos Casamos!</p>
-            <h1 class="font-display-lg text-primary text-4xl md:text-5xl my-10 tracking-[0.2em] leading-tight">
-                KARI<br/>&amp;<br/>JEFF
-            </h1>
-            <p class="font-editorial italic text-lg text-tertiary max-w-[280px] leading-relaxed mb-12">
-                Acompáñanos a celebrar el comienzo de nuestra nueva historia.
-            </p>
+        <div class="rounded-[20px] overflow-hidden shadow-xl">
+            <img src="noscasamos.jpeg" alt="Kari & Jeff" class="w-full h-auto block"/>
         </div>
 
         <!-- Bendición y padres -->
@@ -241,99 +235,105 @@
     </section>
 
     <!-- Date Section -->
-    <section class="reveal">
-        <div class="paper-texture p-8 rounded-[20px] text-on-background text-center shadow-lg relative overflow-hidden border border-outline-variant/20">
-            <h2 class="font-display-lg text-2xl mb-6 tracking-widest text-primary">CELEBRA CON NOSOTROS</h2>
-            <div class="flex items-center justify-center gap-4 border-y border-primary/20 py-8">
-                <div class="text-right">
-                    <p class="font-editorial italic text-xl text-tertiary">Sábado</p>
-                </div>
-                <div class="px-6 border-x border-primary/20">
-                    <p class="font-display-lg text-5xl text-primary">26</p>
-                    <p class="font-body-md uppercase tracking-widest text-sm text-tertiary">Setiembre</p>
-                </div>
-                <div class="text-left">
-                    <p class="font-editorial italic text-xl text-tertiary">6:45 P.M.</p>
-                </div>
-            </div>
-            <div class="mt-8 flex justify-center opacity-80">
-                <img alt="Wedding Couple Illustration" class="w-48 h-auto" style="border-radius: 50% / 28%; object-fit: cover;" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxKazUxICTAnuExXlUZZxkEgiISkAnl8QFZB1KZ2J0y-uxacy2Tftb5Xs8YKC3Jx78KqfWAVNraWhKTMrzKXgf5Hy5PdDkSzUm31xGiGFEGNZc8oekB7F5Sknp57-xyk4Zwso89HBjW0yKLwaygNZoKEr-ZenJ8Nl5PDqVljtxsAZinEC6rElETg4N6Z8Cha0IV-oiVmI2oOUcvFx7nZgxPHzF6yVBZKwz2nLtElxh45sODqBHyBT_Z0cZe2g-MuaAmizjye7gCRw"/>
-            </div>
-        </div>
-    </section>
+    <!-- Celebra con nosotros + Countdown -->
+    <div class="relative">
 
-    <!-- Countdown -->
-    <section class="reveal text-center space-y-3">
-        <p class="font-display-lg text-primary text-4xl tracking-widest">¡Prepárate!</p>
-        <p class="font-editorial italic text-lg text-tertiary">Nos vemos dentro de:</p>
-    </section>
-    <section class="reveal flex justify-center gap-6 text-center -mt-4">
-        <div class="flex flex-col">
-            <span class="font-display-lg text-3xl text-primary" id="days">00</span>
-            <span class="font-editorial italic text-xs uppercase tracking-widest text-tertiary">Días</span>
-        </div>
-        <div class="flex flex-col">
-            <span class="font-display-lg text-3xl text-primary" id="hours">00</span>
-            <span class="font-editorial italic text-xs uppercase tracking-widest text-tertiary">Hrs</span>
-        </div>
-        <div class="flex flex-col">
-            <span class="font-display-lg text-3xl text-primary" id="minutes">00</span>
-            <span class="font-editorial italic text-xs uppercase tracking-widest text-tertiary">Min</span>
-        </div>
-        <div class="flex flex-col">
-            <span class="font-display-lg text-3xl text-primary" id="seconds">00</span>
-            <span class="font-editorial italic text-xs uppercase tracking-widest text-tertiary">Seg</span>
-        </div>
-    </section>
-
-    <!-- Event Cards -->
-    <div class="grid grid-cols-1 gap-8">
-        <!-- Ceremonia Civil -->
-        <section class="reveal paper-texture p-8 rounded-[20px] shadow-md border border-outline-variant/10 text-center">
-            <div class="mb-4 flex justify-center text-primary">
-                <span class="material-symbols-outlined text-4xl">church</span>
+      <!-- Tarjeta paper — z inferior, padding extra abajo para dar espacio al chip -->
+      <section class="reveal relative z-0">
+        <div class="paper-texture pt-8 px-8 pb-16 rounded-[24px] text-on-background text-center shadow-lg border border-outline-variant/20">
+          <h2 class="font-display-lg text-2xl mb-6 tracking-widest text-primary">CELEBRA CON NOSOTROS</h2>
+          <div class="flex items-center justify-center gap-4 border-y border-primary/20 py-6">
+            <div class="text-right">
+              <p class="font-editorial italic text-xl text-tertiary">Sábado</p>
             </div>
-            <h3 class="font-display-lg text-xl tracking-widest mb-4">CEREMONIA RELIGIOSA</h3>
-            <p class="font-editorial italic text-lg mb-2">Parroquia El Buen Pastor</p>
-            <p class="font-body-md text-sm text-tertiary mb-8">Calle Galileo Galilei 7590, Los Olivos</p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
-                <a class="inline-flex items-center gap-2 px-6 py-3 border border-primary text-primary font-body-md text-xs uppercase tracking-[0.2em] hover:bg-primary hover:text-white transition-all rounded-full" href="https://maps.app.goo.gl/1ZnAHeymYyKgTS8K7" target="_blank" rel="noopener">
-                    <span class="material-symbols-outlined text-sm">location_on</span>
+            <div class="px-6 border-x border-primary/20">
+              <p class="font-display-lg text-5xl text-primary">26</p>
+              <p class="font-body-md uppercase tracking-widest text-sm text-tertiary">Setiembre</p>
+            </div>
+            <div class="text-left">
+              <p class="font-editorial italic text-xl text-tertiary">6:45 P.M.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Chip Prepárate — z superior, delgado, muy redondeado, sube sobre la tarjeta -->
+      <div class="relative z-10 -mt-10 mx-6 rounded-[40px] py-5 px-6 text-center shadow-xl" style="background-color: #484720;">
+        <p class="font-display-lg text-xl tracking-widest mb-0.5" style="color: #f0ead8;">¡Prepárate!</p>
+        <p class="font-editorial italic text-xs mb-4" style="color: rgba(240,234,216,0.60);">Nos vemos dentro de:</p>
+        <div class="flex justify-center items-start gap-3 text-center">
+          <div class="flex flex-col">
+            <span class="font-display-lg text-2xl leading-none" style="color: #f0ead8;" id="days">00</span>
+            <span class="font-editorial italic text-[10px] uppercase tracking-widest mt-1" style="color: rgba(240,234,216,0.50);">Días</span>
+          </div>
+          <span class="font-display-lg text-xl leading-none mt-0.5" style="color: rgba(240,234,216,0.35);">:</span>
+          <div class="flex flex-col">
+            <span class="font-display-lg text-2xl leading-none" style="color: #f0ead8;" id="hours">00</span>
+            <span class="font-editorial italic text-[10px] uppercase tracking-widest mt-1" style="color: rgba(240,234,216,0.50);">Horas</span>
+          </div>
+          <span class="font-display-lg text-xl leading-none mt-0.5" style="color: rgba(240,234,216,0.35);">:</span>
+          <div class="flex flex-col">
+            <span class="font-display-lg text-2xl leading-none" style="color: #f0ead8;" id="minutes">00</span>
+            <span class="font-editorial italic text-[10px] uppercase tracking-widest mt-1" style="color: rgba(240,234,216,0.50);">Min</span>
+          </div>
+          <span class="font-display-lg text-xl leading-none mt-0.5" style="color: rgba(240,234,216,0.35);">:</span>
+          <div class="flex flex-col">
+            <span class="font-display-lg text-2xl leading-none" style="color: #f0ead8;" id="seconds">00</span>
+            <span class="font-editorial italic text-[10px] uppercase tracking-widest mt-1" style="color: rgba(240,234,216,0.50);">Seg</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Event Cards — círculos escalonados diagonal -->
+    <div class="relative" style="height: 560px;">
+
+        <!-- Ceremonia Religiosa — círculo superior izquierda -->
+        <section class="reveal absolute top-0 left-0 flex flex-col items-center justify-center text-center shadow-lg z-10 p-6"
+                 style="width: 310px; height: 310px; border-radius: 50%; background-color: #6D4C41;">
+            <span class="material-symbols-outlined text-3xl mb-1" style="color: #f5ede8;">church</span>
+            <h3 class="font-display-lg text-sm tracking-widest mb-1" style="color: #f5ede8;">CEREMONIA<br/>RELIGIOSA</h3>
+            <p class="font-editorial italic text-sm mb-0.5" style="color: #f5ede8;">Parroquia El Buen Pastor</p>
+            <p class="font-body-md text-[10px] mb-3 leading-tight" style="color: rgba(245,237,232,0.65);">Calle Galileo Galilei 7590,<br/>Los Olivos</p>
+            <div class="flex flex-col gap-1.5 items-center">
+                <a class="inline-flex items-center justify-center gap-1 px-2 py-1 border font-body-md text-[9px] uppercase tracking-wider transition-all rounded-full" style="border-color: rgba(245,237,232,0.6); color: #f5ede8;" href="https://maps.app.goo.gl/1ZnAHeymYyKgTS8K7" target="_blank" rel="noopener">
+                    <span class="material-symbols-outlined" style="font-size:11px;">location_on</span>
                     Google Maps
                 </a>
-                <a class="inline-flex items-center gap-2 px-6 py-3 border border-primary text-primary font-body-md text-xs uppercase tracking-[0.2em] hover:bg-primary hover:text-white transition-all rounded-full" href="https://m.uber.com/ul/?action=setPickup&dropoff[latitude]=-11.997819&dropoff[longitude]=-77.063214" target="_blank" rel="noopener">
-                    <span class="material-symbols-outlined text-sm">local_taxi</span>
+                <a class="inline-flex items-center justify-center gap-1 px-2 py-1 border font-body-md text-[9px] uppercase tracking-wider transition-all rounded-full" style="border-color: rgba(245,237,232,0.6); color: #f5ede8;" href="https://m.uber.com/ul/?action=setPickup&dropoff[latitude]=-11.997819&dropoff[longitude]=-77.063214" target="_blank" rel="noopener">
+                    <span class="material-symbols-outlined" style="font-size:11px;">local_taxi</span>
                     Solicitar un Taxi
                 </a>
             </div>
         </section>
 
-        <!-- Recepción -->
-        <section class="reveal paper-texture p-8 rounded-[20px] shadow-md border border-outline-variant/10 text-center">
-            <div class="mb-4 flex justify-center text-primary">
-                <span class="material-symbols-outlined text-4xl">restaurant</span>
-            </div>
-            <h3 class="font-display-lg text-xl tracking-widest mb-4">RECEPCIÓN</h3>
-            <p class="font-editorial italic text-lg mb-2">Casa Hacienda Bocanegra</p>
-            <p class="font-body-md text-sm text-tertiary mb-8">Jose Valle Skinner 220, Callao 07031</p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
-                <a class="inline-flex items-center gap-2 px-6 py-3 border border-primary text-primary font-body-md text-xs uppercase tracking-[0.2em] hover:bg-primary hover:text-white transition-all rounded-full" href="https://maps.app.goo.gl/4cYftw57kHWpNmGz6" target="_blank" rel="noopener">
-                    <span class="material-symbols-outlined text-sm">location_on</span>
+        <!-- Recepción — círculo inferior derecha -->
+        <section class="reveal paper-texture absolute bottom-0 right-0 flex flex-col items-center justify-center text-center shadow-lg border border-outline-variant/10 z-0 p-6"
+                 style="width: 310px; height: 310px; border-radius: 50%;">
+            <span class="material-symbols-outlined text-3xl text-primary mb-1">restaurant</span>
+            <h3 class="font-display-lg text-sm tracking-widest mb-1">RECEPCIÓN</h3>
+            <p class="font-editorial italic text-sm mb-0.5">Casa Hacienda Bocanegra</p>
+            <p class="font-body-md text-[10px] text-tertiary mb-3 leading-tight">Jose Valle Skinner 220,<br/>Callao 07031</p>
+            <div class="flex flex-col gap-1.5 items-center">
+                <a class="inline-flex items-center justify-center gap-1 px-2 py-1 border border-primary text-primary font-body-md text-[9px] uppercase tracking-wider hover:bg-primary hover:text-white transition-all rounded-full" href="https://maps.app.goo.gl/4cYftw57kHWpNmGz6" target="_blank" rel="noopener">
+                    <span class="material-symbols-outlined" style="font-size:11px;">location_on</span>
                     Google Maps
                 </a>
-                <a class="inline-flex items-center gap-2 px-6 py-3 border border-primary text-primary font-body-md text-xs uppercase tracking-[0.2em] hover:bg-primary hover:text-white transition-all rounded-full" href="https://m.uber.com/ul/?action=setPickup&dropoff[latitude]=-12.013867&dropoff[longitude]=-77.113280" target="_blank" rel="noopener">
-                    <span class="material-symbols-outlined text-sm">local_taxi</span>
+                <a class="inline-flex items-center justify-center gap-1 px-2 py-1 border border-primary text-primary font-body-md text-[9px] uppercase tracking-wider hover:bg-primary hover:text-white transition-all rounded-full" href="https://m.uber.com/ul/?action=setPickup&dropoff[latitude]=-12.013867&dropoff[longitude]=-77.113280" target="_blank" rel="noopener">
+                    <span class="material-symbols-outlined" style="font-size:11px;">local_taxi</span>
                     Solicitar un Taxi
                 </a>
             </div>
         </section>
+
     </div>
 
     <!-- Dress Code -->
-    <section class="reveal paper-texture p-10 rounded-[20px] shadow-md border border-outline-variant/10">
-        <h3 class="font-display-lg text-center text-xl tracking-widest mb-8">CÓDIGO DE VESTIMENTA FORMAL</h3>
-        <p class="font-editorial italic text-xl text-primary text-center mb-8">Terno completo · Vestido largo</p>
-        <p class="font-editorial italic text-base text-tertiary text-center leading-relaxed border-t border-outline-variant/30 pt-6">
+    <section class="reveal p-10 rounded-[20px] shadow-md" style="background-color: #6D4C41;">
+        <h3 class="font-display-lg text-center text-xl tracking-widest mb-8" style="color: #f5ede8;">CÓDIGO DE VESTIMENTA FORMAL</h3>
+        <p class="font-editorial italic text-xl text-center mb-8" style="color: #f5ede8;">Terno completo · Vestido largo</p>
+        <p class="font-editorial italic text-base text-center leading-relaxed pt-6" style="color: rgba(245,237,232,0.70); border-top: 1px solid rgba(245,237,232,0.25);">
             Para nuestras invitadas, agradeceremos evitar los tonos blanco, ivory, crema, champagne y la gama de verdes (salvia, eucalipto y oliva), reservados para la novia y nuestro círculo más cercano.
         </p>
     </section>
