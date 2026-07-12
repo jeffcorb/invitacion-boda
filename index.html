@@ -558,10 +558,9 @@
         rsvpBtn.addEventListener('click', () => {
             const nombre = window.confirmedGuestName || 'Invitado';
 
-            rsvpBtn.disabled        = true;
-            rsvpBtn.textContent     = 'Enviando...';
+            rsvpBtn.disabled    = true;
+            rsvpBtn.textContent = 'Enviando...';
 
-            // Usamos un iframe oculto + form para evitar bloqueos CORS de Apps Script
             // Recoger nombres de acompañantes (checkbox marcado → "Sin acompañante")
             const companions = Array.from(document.querySelectorAll('.companion-group')).map(group => {
                 const checkbox = group.querySelector('.companion-skip');
@@ -570,42 +569,23 @@
                 return input ? input.value.trim() : '';
             }).filter(v => v).join(' | ');
 
-            console.log('[RSVP] Nombre:', nombre);
-            console.log('[RSVP] Acompañantes:', companions || '(ninguno)');
+            const params = new URLSearchParams({ name: nombre, status: 'Confirmado' });
+            if (companions) params.append('companions', companions);
 
-            const iframeName = 'rsvp_frame_' + Date.now();
-            const iframe = document.createElement('iframe');
-            iframe.name  = iframeName;
-            iframe.style.display = 'none';
-            document.body.appendChild(iframe);
-
-            const form = document.createElement('form');
-            form.method = 'GET';
-            form.action = APPS_SCRIPT_URL;
-            form.target = iframeName;
-
-            const fields = [['name', nombre], ['status', 'Confirmado']];
-            if (companions) fields.push(['companions', companions]);
-
-            fields.forEach(([k, v]) => {
-                const input = document.createElement('input');
-                input.type  = 'hidden';
-                input.name  = k;
-                input.value = v;
-                form.appendChild(input);
-            });
-
-            document.body.appendChild(form);
-            form.submit();
-
-            // Limpiar DOM y mostrar éxito tras 2 s (tiempo suficiente para que llegue)
-            setTimeout(() => {
-                document.body.removeChild(form);
-                document.body.removeChild(iframe);
-                rsvpBtn.textContent     = '¡Confirmado!';
-                rsvpResult.style.color  = '#5f5e2b';
-                rsvpResult.textContent  = `¡Gracias, ${nombre}! Te esperamos con mucho cariño.`;
-            }, 2000);
+            // fetch sin mode: 'no-cors' — el navegador lanza un error CORS al leer la
+            // respuesta, pero la petición llega igual a Apps Script.  Mostramos éxito
+            // en ambas ramas (.then / .catch).
+            fetch(`${APPS_SCRIPT_URL}?${params.toString()}`)
+                .then(() => {
+                    rsvpBtn.textContent    = '¡Confirmado!';
+                    rsvpResult.style.color = '#5f5e2b';
+                    rsvpResult.textContent = `¡Gracias, ${nombre}! Te esperamos con mucho cariño.`;
+                })
+                .catch(() => {
+                    rsvpBtn.textContent    = '¡Confirmado!';
+                    rsvpResult.style.color = '#5f5e2b';
+                    rsvpResult.textContent = `¡Gracias, ${nombre}! Te esperamos con mucho cariño.`;
+                });
         });
     }
 </script>
