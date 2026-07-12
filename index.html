@@ -128,7 +128,7 @@
         }
     </style>
 </head>
-<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<body class="text-on-background font-body-md overflow-x-hidden" style="background-color: #fbf9f8; background-image: url('fondo.png'); background-repeat: repeat-y; background-position: center top; background-size: 85% auto;">
 
 <!-- ============================================================
      ENVELOPE OPENING OVERLAY
@@ -185,8 +185,6 @@
      ============================================================ -->
 <div id="invitation-reveal">
 
-<!-- Fixed Background -->
-<div class="fixed inset-0 z-[-1] opacity-40 parallax-bg" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCFMBZNVl2pw18zAqtOB_gLAdCDS5XV4fGikrv05dYrCVA1FhQwfZGlvGqORGcEG_jqSuizuYhDaHXItSjGm_ltmGanWO5eV2sQImUEStnhlSQYITpDlydPC5T_u1-1g-WdFmJ7qfbNpIxyLr0Ot3xO1grRFWSKyuePfiI7ujRbpJt7gBnT-E_fz90KaV6AakJewhtCRF1JFHveIHRQWFeiLJsduxXRN-ESwDEQ0Zy6AlfPDk4YINCxtwQAe8XHzL6TuI24Wh0dmt8');"></div>
 
 <!-- Top Music Player -->
 <nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant/30 px-margin-mobile md:px-margin-desktop py-3">
@@ -207,29 +205,34 @@
 
     <!-- Hero Section -->
     <section class="reveal active relative">
-        <div class="rounded-[20px] overflow-hidden shadow-xl">
+        <div class="rounded-[20px] overflow-hidden shadow-xl relative">
             <img src="noscasamos.jpeg" alt="Kari & Jeff" class="w-full h-auto block"/>
+            <!-- Overlay texto inferior -->
+            <div class="absolute bottom-0 left-0 right-0 px-8 py-8 text-center" style="background: linear-gradient(to top, rgba(27,28,28,0.72) 0%, transparent 100%);">
+                <p class="font-editorial italic text-2xl mb-2" style="color: rgba(245,240,232,0.85);">¡Nos Casamos!</p>
+                <h1 class="font-display-lg tracking-[0.2em] leading-tight mb-4" style="font-size: 3rem; color: #f5f0e8;">
+                    KARI<br/>&amp;<br/>JEFF
+                </h1>
+                <p class="font-editorial italic text-base leading-relaxed" style="color: rgba(245,240,232,0.75);">
+                    Acompáñanos a celebrar el comienzo<br/>de nuestra nueva historia.
+                </p>
+            </div>
         </div>
 
         <!-- Bendición y padres -->
-        <div class="paper-texture p-12 rounded-[20px] shadow-xl border border-outline-variant/20 flex flex-col items-center text-center relative overflow-hidden mt-6">
+        <div class="paper-texture p-10 rounded-[20px] shadow-xl border border-outline-variant/20 flex flex-col items-center text-center mt-6">
             <p class="font-editorial italic text-xl text-tertiary mb-8">Con la bendición de Dios y nuestros padres</p>
-            <div class="grid grid-cols-2 gap-8 w-full">
+            <div class="flex flex-col gap-8 w-full">
                 <div class="space-y-2">
                     <p class="font-body-md text-[12px] uppercase tracking-widest text-primary font-bold mb-3">Padres de la Novia</p>
                     <p class="font-editorial italic text-lg text-on-background">Percy Hernández Ramos</p>
                     <p class="font-editorial italic text-lg text-on-background">Irma Obregón Vega</p>
                 </div>
-                <div class="space-y-2">
+                <div class="space-y-2 border-t border-outline-variant/20 pt-8">
                     <p class="font-body-md text-[12px] uppercase tracking-widest text-primary font-bold mb-3">Padres del Novio</p>
                     <p class="font-editorial italic text-lg text-on-background">Benito Corbera Marín</p>
                     <p class="font-editorial italic text-lg text-on-background">Nilda Santillán Mendoza</p>
                 </div>
-            </div>
-            <div class="mt-8 pt-8 border-t border-outline-variant/30 w-full space-y-2">
-                <p class="font-body-md text-[12px] uppercase tracking-widest text-primary font-bold mb-3">Padrinos</p>
-                <p class="font-editorial italic text-lg text-on-background">Jorge Corbera Marín</p>
-                <p class="font-editorial italic text-lg text-on-background">Tereza Velazco Palomino</p>
             </div>
         </div>
     </section>
