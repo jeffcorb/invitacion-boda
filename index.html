@@ -388,11 +388,22 @@
         <h3 class="font-display-lg text-center text-sm tracking-widest mb-3">CONFIRMA TU ASISTENCIA</h3>
         <p class="font-editorial italic text-sm text-tertiary mb-2">¿Nos acompañas? Confirma tu asistencia con un clic.</p>
         <p class="font-editorial italic text-sm text-tertiary mb-4">Agradeceremos confirmar tu asistencia a más tardar el <strong>09 de agosto de 2026</strong>.</p>
+        <!-- Teléfono -->
+        <div class="relative w-full mb-6">
+            <input id="rsvp-phone" type="tel" placeholder=" " autocomplete="tel"
+                class="peer w-full bg-transparent border-0 border-b border-primary/30 py-3 px-0 focus:ring-0 focus:border-primary text-sm font-body-md transition-opacity"/>
+            <label class="absolute top-3 left-0 text-tertiary text-xs uppercase tracking-widest transition-all peer-focus:-top-4 peer-focus:text-[10px] peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-[10px]"
+                for="rsvp-phone">Número de Teléfono</label>
+        </div>
+
         <!-- Campos de acompañantes — se generan dinámicamente según los pases -->
-        <div id="rsvp-companions" class="w-full space-y-6 mb-2"></div>
+        <div id="rsvp-companions" class="w-full space-y-6 mb-4"></div>
 
         <button id="rsvp-btn" class="w-full py-4 bg-primary text-white font-body-md text-xs uppercase tracking-[0.2em] rounded-full hover:shadow-lg transition-all transform active:scale-[0.98]">
             Confirmar Asistencia
+        </button>
+        <button id="rsvp-no-btn" class="w-full py-4 bg-transparent text-primary border border-primary font-body-md text-xs uppercase tracking-[0.2em] rounded-full hover:bg-primary/10 transition-all transform active:scale-[0.98] mt-3">
+            No Asistiré
         </button>
         <div id="rsvp-result" class="mt-6 font-editorial italic text-base"></div>
     </section>
@@ -553,7 +564,9 @@
 
     if (rsvpBtn) {
         rsvpBtn.addEventListener('click', () => {
-            const nombre = window.confirmedGuestName || 'Invitado';
+            const nombre   = window.confirmedGuestName || 'Invitado';
+            const telefono = (document.getElementById('rsvp-phone')?.value || '').trim();
+            const nameField = telefono ? `${nombre} - ${telefono}` : nombre;
 
             rsvpBtn.disabled    = true;
             rsvpBtn.textContent = 'Enviando...';
@@ -566,7 +579,7 @@
                 return input ? input.value.trim() : '';
             }).filter(v => v).join(' | ');
 
-            const params = new URLSearchParams({ name: nombre, status: 'Confirmado' });
+            const params = new URLSearchParams({ name: nameField, status: 'Confirmado' });
             if (companions) params.append('companions', companions);
 
             // fetch sin mode: 'no-cors' — el navegador lanza un error CORS al leer la
@@ -582,6 +595,33 @@
                     rsvpBtn.textContent    = '¡Confirmado!';
                     rsvpResult.style.color = '#5f5e2b';
                     rsvpResult.textContent = `¡Gracias, ${nombre}! Te esperamos con mucho cariño.`;
+                });
+        });
+    }
+
+    // --- No Asistiré ---
+    const rsvpNoBtn = document.getElementById('rsvp-no-btn');
+    if (rsvpNoBtn) {
+        rsvpNoBtn.addEventListener('click', () => {
+            const nombre    = window.confirmedGuestName || 'Invitado';
+            const telefono  = (document.getElementById('rsvp-phone')?.value || '').trim();
+            const nameField = telefono ? `${nombre} - ${telefono} - NO ASISTIRÁ` : `${nombre} - NO ASISTIRÁ`;
+
+            rsvpNoBtn.disabled    = true;
+            rsvpNoBtn.textContent = 'Enviando...';
+
+            const params = new URLSearchParams({ name: nameField, status: 'No asistirá' });
+
+            fetch(`${APPS_SCRIPT_URL}?${params.toString()}`)
+                .then(() => {
+                    rsvpNoBtn.textContent    = 'Registrado';
+                    rsvpResult.style.color   = '#79776a';
+                    rsvpResult.textContent   = `Lo sentimos mucho, ${nombre}. ¡Esperamos verte pronto!`;
+                })
+                .catch(() => {
+                    rsvpNoBtn.textContent    = 'Registrado';
+                    rsvpResult.style.color   = '#79776a';
+                    rsvpResult.textContent   = `Lo sentimos mucho, ${nombre}. ¡Esperamos verte pronto!`;
                 });
         });
     }
