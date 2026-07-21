@@ -77,6 +77,8 @@
     { name: 'Kalil Caceres',             passes: 1 },
     { name: 'Manuel Zapata',             passes: 2 },
     { name: 'Rafael Espinoza',           passes: 2 },
+    { name: 'Omar Quispe',               passes: 1 },
+    { name: 'Juan Camara',               passes: 1 },
   ];
 
   /* ----------------------------------------------------------
