@@ -79,7 +79,10 @@
     { name: 'Rafael Espinoza',           passes: 2 },
     { name: 'Omar Quispe',               passes: 1 },
     { name: 'Juan Camara',               passes: 1 },
-    { name: "Jonathan's Zapata",         passes: 1 },
+    { name: "Jonathan's Zapata",              passes: 1 },
+    { name: 'Alexandra Bautista',             passes: 1 },
+    { name: 'Willian Gala',                   passes: 2 },
+    { name: 'Julio Alejandro Villanueva',     passes: 2 },
   ];
 
   /* ----------------------------------------------------------
