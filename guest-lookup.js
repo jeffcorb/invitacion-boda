@@ -83,6 +83,7 @@
     { name: 'Alexandra Bautista',             passes: 1 },
     { name: 'Willian Gala',                   passes: 2 },
     { name: 'Julio Alejandro Villanueva',     passes: 2 },
+    { name: 'Jhuliana Ancajima',              passes: 1 },
   ];
 
   /* ----------------------------------------------------------
