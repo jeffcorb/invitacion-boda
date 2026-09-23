@@ -86,6 +86,7 @@
     { name: 'Jhuliana Ancajima',              passes: 1 },
     { name: 'Luis Antonio Carrion Corbera',   passes: 3 },
     { name: 'Cesar Alvarado',                 passes: 2 },
+    { name: 'Karla Davila',                   passes: 2 },
   ];
 
   /* ----------------------------------------------------------
